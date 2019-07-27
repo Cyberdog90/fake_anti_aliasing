@@ -46,7 +46,7 @@ def make_mask(edge, w, h):
 def file_survey():
     flag = 0
     while True:
-        print("保存ファイル名を指定してください : ", end="")
+        print("Please enter filename for save. : ", end="")
         file_name = input()
         dir_files = glob.glob("./data/*")
         for name in dir_files:
@@ -55,7 +55,7 @@ def file_survey():
             if name == file_name:
                 flag += 1
         if flag == 1:
-            print("指定したファイル名は既に存在します。上書きしますか?(y/other) : ", end="")
+            print("This filename already exist. Do you want to overwrite?(y/other) : ", end="")
             yn = input()
             if yn == "y":
                 return file_name
